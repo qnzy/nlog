@@ -3,16 +3,18 @@ This is a small logging library for C (it's short for nano log).
 
 There are three functions:
 
-`void nlog_init (void (*printstr)(const char*));
-`void nlog_set_level (unsigned int level);
-`void nlog(unsigned int level, const char* str);
+`void nlog_init (void (*printstr)(const char*));`
 
-Before using the library you must call nlog_init and pass it
+`void nlog_set_level (unsigned int level);`
+
+`void nlog(unsigned int level, const char* str);`
+
+Before using the library you must call **nlog_init** and pass it
 an output function as a parameter. 
 
-The logging level can be set using the nlog_set_level function. 
+The logging level can be set using the **nlog_set_level** function. 
 
-Finally, use nlog for logging a message. The message will be
+Finally, use **nlog** for logging a message. The message will be
 logged, if the given level is smaller or equal to the level
 set previously with nlog_set_level.
 
