@@ -12,7 +12,7 @@ void printstr(const char*str) {
 void logAllLevels() {
     logcount = 0;
     nlog(LOG_ERROR,"error");
-    nlog(LOG_WARN,"warn");
+    nlog(LOG_WARNING,"warning");
     nlog(LOG_INFO,"info");
     nlog(LOG_DEBUG,"debug");
 }
@@ -24,10 +24,10 @@ int main(void) {
     if (logcount == 1) {printf("LOG_ERROR OK\n");} 
     else {printf("LOG_ERROR FAIL\n");}
 
-    nlog_set_level(LOG_WARN);
+    nlog_set_level(LOG_WARNING);
     logAllLevels();
-    if (logcount == 2) {printf("LOG_WARN OK\n");}
-    else {printf("LOG_WARN FAIL\n");}
+    if (logcount == 2) {printf("LOG_WARNING OK\n");}
+    else {printf("LOG_WARNING FAIL\n");}
 
     nlog_set_level(LOG_INFO);
     logAllLevels();
