@@ -17,7 +17,7 @@
 
 void nlog_init (void (*printstr)(const char*));
 void nlog_set_level (unsigned int level);
-void nlog(unsigned int level, const char* str);
+void nlog (unsigned int level, const char* str);
 
 
 #ifdef NLOG_IMPLEMENTATION
@@ -35,7 +35,7 @@ void nlog_set_level (unsigned int level) {
     nlog_level = level;
 }
 
-void nlog(unsigned int level, const char* str) {
+void nlog (unsigned int level, const char* str) {
     if ((nlog_printstr != NULL) && (level <= nlog_level)) {
         nlog_printstr(str);
     }
