@@ -18,6 +18,9 @@ void logAllLevels() {
 }
 
 int main(void) {
+
+    logAllLevels(); /* calling before init, should be a NOP... */
+
     nlog_init(printstr);
     nlog_set_level(LOG_ERROR); 
     logAllLevels(); 
