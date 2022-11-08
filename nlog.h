@@ -27,8 +27,7 @@ void nlog_init (void (*printstr)(const char*)) {
         nlog_printstr = printstr;
     }
 }
-    
-    
+
 void nlog_set_level (unsigned int level) {
     nlog_level = level;
 }
