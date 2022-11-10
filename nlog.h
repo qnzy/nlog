@@ -5,8 +5,7 @@
  * this is a header only library. to use it you need
  * to define NLOG_IMPLEMENTATION in exactly one
  * compilation unit before including this file.
- *
- * */
+ */
 
 #pragma once
 
