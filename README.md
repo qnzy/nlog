@@ -7,7 +7,7 @@ There are three functions:
 
 `void nlog_set_level (unsigned int level);`
 
-`void nlog(unsigned int level, const char* str);`
+`void nlog (unsigned int level, const char* str);`
 
 Before using the library you must call **nlog_init** and pass it
 an output function as a parameter. 
