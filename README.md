@@ -1,5 +1,5 @@
-# nlog
-This is a small logging library for C (it's short for nano log).
+# nlog (nanolog) 
+nlog is a small logging library for C.
 
 There are three functions:
 
