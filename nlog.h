@@ -9,11 +9,13 @@
 
 #pragma once
 
+#include <stddef.h>
+
 #define LOG_ALWAYS      0
-#define LOG_ERROR       0
-#define LOG_WARNING     1
-#define LOG_INFO        2
-#define LOG_DEBUG       3
+#define LOG_ERROR       1
+#define LOG_WARNING     2
+#define LOG_INFO        3
+#define LOG_DEBUG       4
 
 void nlog_init (void (*printstr)(const char*));
 void nlog_set_level (unsigned int level);
@@ -26,9 +28,8 @@ static unsigned int nlog_level = 0;
 static void (*nlog_printstr)(const char * str) = NULL;
 
 void nlog_init (void (*printstr)(const char*)) {
-    if (printstr != NULL) {
+        // use nlog_init(NULL) to disable logging
         nlog_printstr = printstr;
-    }
 }
 
 void nlog_set_level (unsigned int level) {
@@ -36,7 +37,7 @@ void nlog_set_level (unsigned int level) {
 }
 
 void nlog (unsigned int level, const char* str) {
-    if ((nlog_printstr != NULL) && (level <= nlog_level)) {
+    if ((nlog_printstr != NULL) && (str != NULL) && (level <= nlog_level)) {
         nlog_printstr(str);
     }
 }
